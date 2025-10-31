@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Promoción</title>
+<style type="text/css">
+body,td,th {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #F99;
+}
+body {
+	background-color: #CFF;
+}
+</style>
+</head>
+
+<body>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <p>&nbsp;</p>
+                  </blockquote>
+                  <p>DESCUBRE EL AROMA QUE MEJOR TE REPRESENTE. </p>
+                  <p>BUENOS ESTILOS, BUENOS AROMAS, TE OFRECEMOS LO MEJOR.</p>
+                  <p><img src="file:///C|/Users/HP/Downloads/producto/Frangancia.jpeg" width="467" height="494" /></p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>DIVINE FRAGANSE.</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botón de Like</title>
+  <style>
+    .like-button {
+      background-color: #1877F2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .like-button:hover {
+      background-color: #145DB2;
+    }
+
+    .liked {
+      background-color: #00C851;
+    }
+
+    .contador {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+    
+  <button class="like-button" id="btnLike">👍 Me gusta</button>
+  <span class="contador" id="contador">0</span>
+
+  <script>
+    let contador = 0;
+    const boton = document.getElementById('btnLike');
+    const mostrarContador = document.getElementById('contador');
+
+    boton.addEventListener('click', () => {
+      contador++;
+      mostrarContador.textContent = contador;
+      boton.classList.toggle('liked');
+    });
+  </script>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botón de Comentar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    .comentario-container {
+      width: 350px;
+      background: #f3f3f3;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .comentario-container h2 {
+      color: #333;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 8px;
+      font-size: 14px;
+      resize: none;
+      outline: none;
+    }
+
+    .boton-comentar {
+      background-color: #1877F2;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-top: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .boton-comentar:hover {
+      background-color: #145DB2;
+    }
+
+    .comentarios {
+      margin-top: 15px;
+    }
+
+    .comentario {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="comentario-container">
+    <h2>💬 Comentarios</h2>
+    <textarea id="textoComentario" placeholder="Escribe tu comentario..."></textarea><br>
+    <button class="boton-comentar" id="btnComentar">Publicar comentario</button>
+
+    <div class="comentarios" id="listaComentarios"></div>
+  </div>
+
+  <script>
+    const boton = document.getElementById('btnComentar');
+    const campo = document.getElementById('textoComentario');
+    const lista = document.getElementById('listaComentarios');
+
+    boton.addEventListener('click', () => {
+      const texto = campo.value.trim();
+      if (texto === "") {
+        alert("Por favor, escribe algo antes de comentar.");
+        return;
+      }
+
+      const nuevoComentario = document.createElement('div');
+      nuevoComentario.classList.add('comentario');
+      nuevoComentario.textContent = texto;
+      lista.prepend(nuevoComentario); // Lo muestra arriba
+      campo.value = ""; // Limpia el campo
+    });
+  </script>
+
+
+  <a href="Producto1..html">ir a la siguiente página</a>
+
+</body>
+</html>
